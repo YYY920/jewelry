@@ -1,41 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💎 Rosendal Jewellery - Next.js 项目
 
-## Getting Started
+**Rosendal Jewellery** 是一个使用 **Next.js** 和 **MongoDB** 构建的高端珠宝电子商务网站。
 
-First, run the development server:
+---
+
+## 🚀 如何运行本项目
+
+### 1️⃣ 克隆仓库
+
+```bash
+git clone https://github.com/blingbling-jewelry/jewelry-private.git
+cd jewelry-private
+```
+
+---
+
+### 2️⃣ 安装依赖
+
+```bash
+npm install   # 或者使用 yarn install
+```
+
+---
+
+### 3️⃣ 配置环境变量
+
+在项目根目录创建 `.env.local` 文件，并填入以下内容：
+
+```env
+PORT=3000
+MONGODB_URI=mongodb+srv://your-username:your-password@cluster.mongodb.net/jewelry-db
+NEXT_PUBLIC_VERCEL_ENV=production
+```
+
+---
+
+### 4️⃣ 运行开发服务器
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 `http://localhost:3000` 🎉
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5️⃣ 构建和部署
 
-## Learn More
+**✅ 本地构建**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**✅ 部署到 Vercel**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+vercel deploy
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 目录结构
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+📦 jewelry-private
+ ┣ 📂 app          # Next.js 组件
+ ┣ 📂 lib          # 工具函数
+ ┣ 📂 public       # 静态资源
+ ┣ 📂 pages        # 页面
+ ┣ 📂 styles       # 样式
+ ┣ 📂 api          # API 逻辑
+ ┣ 📜 .env.local   # 环境变量（需要手动创建）
+ ┣ 📜 package.json # 依赖管理
+ ┣ 📜 next.config.js # Next.js 配置
+ ┗ 📜 README.md    # 项目说明
+```
 
-## How to create prokect
+---
 
-npx create-next-app@latest
-npx shadcn@latest init
+## 🎯 未来计划
+
+✅ **珠宝商品展示**  
+✅ **用户购物车**  
+✅ **订单管理**  
+⏳ **3D 珠宝展示（未来迭代）**
+
+---
+
+## 📬 联系开发者
+
+提交 **Issue** 或联系项目团队 📩
