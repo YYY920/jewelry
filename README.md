@@ -28,9 +28,9 @@ npm install   # 或者使用 yarn install
 在项目根目录创建 `.env.local` 文件，并填入以下内容：
 
 ```env
-PORT=3000
-MONGODB_URI=mongodb+srv://your-username:your-password@cluster.mongodb.net/jewelry-db
-NEXT_PUBLIC_VERCEL_ENV=production
+ NEXT_PUBLIC_APP_NAME=Rosendal Jewellery
+ NEXT_PUBLIC_APP_SLOGAN=Unveil Timeless Elegance.
+ NEXT_PUBLIC_APP_DESCRIPTION=An jewellery store built with Next.js and MongoDB
 ```
 
 ---
@@ -54,24 +54,17 @@ npm run build
 npm start
 ```
 
-**✅ 部署到 Vercel**
-
-```bash
-vercel deploy
-```
-
 ---
 
 ## 📂 目录结构
 
 ```
 📦 jewelry-private
- ┣ 📂 app          # Next.js 组件
+ ┣ 📂 app          # 页面
  ┣ 📂 lib          # 工具函数
  ┣ 📂 public       # 静态资源
- ┣ 📂 pages        # 页面
+ ┣ 📂 pages        # Next.js 组件
  ┣ 📂 styles       # 样式
- ┣ 📂 api          # API 逻辑
  ┣ 📜 .env.local   # 环境变量（需要手动创建）
  ┣ 📜 package.json # 依赖管理
  ┣ 📜 next.config.js # Next.js 配置
@@ -86,9 +79,3 @@ vercel deploy
 ✅ **用户购物车**  
 ✅ **订单管理**  
 ⏳ **3D 珠宝展示（未来迭代）**
-
----
-
-## 📬 联系开发者
-
-提交 **Issue** 或联系项目团队 📩
