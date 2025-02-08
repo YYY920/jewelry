@@ -7,7 +7,7 @@ export default function HomeLayout({
   children: React.ReactNode
 }) {
   return (
-    <div>
+    <div className='h-screen flex flex-col'>
       <Header />
       <main className='flex-1 flex flex-col'>{children}</main>
       <Footer />
