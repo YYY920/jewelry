@@ -47,7 +47,7 @@ npm run dev
 
 ### 5️⃣ 构建和部署
 
-**✅ 本地构建**
+** 本地构建**
 
 ```bash
 npm run build

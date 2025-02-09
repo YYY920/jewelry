@@ -8,8 +8,10 @@ export default function HomeLayout({
 }) {
   return (
     <div className='h-screen flex flex-col'>
-      <Header />
-      <main className='flex-1 flex flex-col'>{children}</main>
+      <div className='fixed top-0 left-0 w-full bg-[#13141E] z-[100] shadow-md'>
+        <Header />
+      </div>
+      <main className='flex-1 flex flex-col pt-[70px]'>{children}</main>
       <Footer />
     </div>
   )

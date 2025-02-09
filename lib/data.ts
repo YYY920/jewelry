@@ -33,6 +33,29 @@ const data = {
       href: '/page/help',
     },
   ],
+  carousels: [
+    {
+      title: 'Elegant Bracelet Collection',
+      buttonCaption: 'Shop Now',
+      image: '/images/banner1.png',
+      url: '/search?category=Bracelets',
+      isPublished: true,
+    },
+    {
+      title: 'Luxury Rings Selection',
+      buttonCaption: 'Explore Now',
+      image: '/images/banner2.png',
+      url: '/search?category=Rings',
+      isPublished: true,
+    },
+    {
+      title: 'Stunning Necklace Showcase',
+      buttonCaption: 'See More',
+      image: '/images/banner3.png',
+      url: '/search?category=Necklaces',
+      isPublished: true,
+    },
+  ],
 }
 
 export default data

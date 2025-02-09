@@ -1,26 +1,58 @@
 'use client'
 import React, { useState } from 'react'
+
 interface DropdownProps {
   label: string
-  items: string[]
+  items?: { name: string; href: string }[]
 }
+
 const menuItems = [
   {
-    label: 'Esoteric Materials',
+    label: 'Home',
+    items: [],
+  },
+  {
+    label: 'All Jewellery',
     items: [
-      'Astrology',
-      'Tarot Cards',
-      'Crystals & Amulets',
-      'Sigils & Grimoires',
+      { name: 'New Arrivals', href: '#' },
+      { name: 'Best Sellers', href: '#' },
+      { name: 'Ready To Ship', href: '#' },
+      { name: 'Gift Cards', href: '#' },
     ],
   },
   {
-    label: 'T-Shirts',
-    items: ['Astrology Prints', 'Symbolic Designs', 'Custom Orders'],
+    label: 'Rings',
+    items: [
+      { name: 'Diamond Rings', href: '#' },
+      { name: 'Gemstone Rings', href: '#' },
+      { name: 'Gold Rings', href: '#' },
+      { name: 'Silver Rings', href: '#' },
+    ],
   },
   {
-    label: 'Jewelry',
-    items: ['Mystic Talismans', 'Zodiac Necklaces', 'Rings & Bracelets'],
+    label: 'Necklaces',
+    items: [
+      { name: 'Diamond Necklaces', href: '#' },
+      { name: 'Gemstone Necklaces', href: '#' },
+      { name: 'Charms', href: '#' },
+    ],
+  },
+  {
+    label: 'Bracelets',
+    items: [
+      { name: 'Tennis Bracelets', href: '#' },
+      { name: 'Diamond Bracelets', href: '#' },
+      { name: 'Charm Bracelets', href: '#' },
+      { name: 'Bangles', href: '#' },
+    ],
+  },
+  {
+    label: 'About',
+    items: [
+      { name: 'Contact Us', href: '#' },
+      { name: 'Jewellery Care', href: '#' },
+      { name: 'Order ＆ Shipping', href: '#' },
+    ],
   },
 ]
 
@@ -33,14 +65,18 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <button className='text-white text-lg py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full'>
+      <button className='text-white mb-2 text-lg py-2 relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full'>
         {label}
       </button>
-      {isOpen && (
-        <div className='absolute top-full left-0 bg-white text-black flex flex-col p-2 rounded-md shadow-lg'>
+      {items && items.length > 0 && isOpen && (
+        <div className='absolute top-full left-0 bg-white text-black flex flex-col gap-2 p-4 rounded-md shadow-lg w-max'>
           {items.map((item, index) => (
-            <a key={index} href='#' className='py-1 px-4 hover:underline'>
-              {item}
+            <a
+              key={index}
+              href={item.href}
+              className='py-1 px-4 hover:underline'
+            >
+              {item.name}
             </a>
           ))}
         </div>
@@ -51,23 +87,10 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-center bg-[#13141E] p-4 relative'>
-      <a
-        href='#'
-        className='mx-4 text-white text-lg py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full'
-      >
-        Home
-      </a>
-
+    <nav className='flex justify-center bg-[#13141E] p-4 relative z-50'>
       {menuItems.map((item, index) => (
         <Dropdown key={index} label={item.label} items={item.items} />
       ))}
-      <a
-        href='#'
-        className='mx-4 text-white text-lg py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full'
-      >
-        About us
-      </a>
     </nav>
   )
 }
